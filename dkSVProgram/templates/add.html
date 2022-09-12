@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <h1>Add member</h1>
+
+        <form action="addrecord/" method="post">
+        {% csrf_token %}
+        Phone Number:<br>
+        <input name="phone">
+        <br><br>
+        Time Line:<br>
+        <input name="timeline">
+        <br><br>
+        <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
