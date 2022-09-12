@@ -17,3 +17,8 @@ def addToM(phoneNum,timeline):
     #cursor.execute("select * from shope.clients;")
     #myresoult = cursor.fetchall()
     conn.commit()
+
+def showEveryone():
+    cursor=conn.cursor()
+    cursor.execute(f"select * from shope.clients;")
+    return conn.commit()
