@@ -2,7 +2,6 @@ from django.urls import path
 from . import views
 import dkSVProgram
 import re
-from SqlTest import sqlTest
 
 
 #urlConfig
