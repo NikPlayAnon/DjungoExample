@@ -6,7 +6,9 @@ import re
 
 #urlConfig
 urlpatterns = [
-    path('members', views.say_hello),
-    path('members/add', views.say_add),
-    path('members/add/addrecord/', views.addrecord),
+    path('members', views.say_hello, name= "say_hello"),
+    path('add/', views.add, name='add'),
+    path('add/addrecord/', views.addrecord, name='addrecord'),
+    path('Quary/', views.Quary, name='Quary'),
+    path('Quary/QuaryResp/', views.QuaryResp, name='QuaryResp'),
 ]

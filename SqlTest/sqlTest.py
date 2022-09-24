@@ -22,3 +22,8 @@ def showEveryone():
     cursor=conn.cursor()
     cursor.execute(f"select * from shope.clients;")
     return conn.commit()
+
+def SimpleQuary(Q):
+    cursor=conn.cursor()
+    cursor.execute(Q)
+    return conn.commit()

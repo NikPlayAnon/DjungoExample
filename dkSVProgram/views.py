@@ -13,14 +13,25 @@ def say_hello(request):
     }
     return HttpResponse(template.render(context, request))
 
-def say_add(request):
+def add(request):
     #return HttpResponse("hello world")
     return render(request, 'add.html')
 
 def addrecord(request):
-  x = request.POST['phone']
-  y = request.POST['timeline']
-  #sqlTest.addToM(phoneNum=x, timeline=y)
-  #member = Members(firstname=x, lastname=y)
-  #member.save()
-  #return HttpResponseRedirect(reverse('index'))
+    x = request.POST['Phone']
+    y = request.POST['Timeline']
+    member = Members(PhoneNum=x, Timeline=y)
+    member.save()
+    return HttpResponseRedirect(reverse('say_hello'))
+
+def Quary(request):
+    #return HttpResponse("hello world")
+    return render(request, 'Qrequest.html')
+
+def QuaryResp(request):
+    mymembers = Members.objects.all().values()
+    template = loader.get_template('Qrespond.html')
+    context = {
+        'mymembers': mymembers,
+    }
+    return HttpResponse(template.render(context, request))

@@ -1,0 +1,21 @@
+<p>
+    <a href="Quary/">Add member</a>
+</p>
+
+<h1>Quary</h1>
+<table border="1"> 
+    <tr>
+        {% for i in mymembers|first %}
+            <td>{{ i }}</td>
+        {% endfor %}
+    </tr> 
+    {% for x in mymembers %}
+        
+    <tr>
+        {% for i in x %}
+            <td>{{x.i}}</td>
+        {% endfor %}
+    </tr> 
+    {% endfor %}
+</table>
+
